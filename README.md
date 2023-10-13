@@ -1,0 +1,1 @@
+# coccidiosis-chicken-detection-cnn
