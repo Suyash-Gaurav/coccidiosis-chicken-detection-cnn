@@ -1,3 +1,4 @@
+#template
 import os
 from pathlib import Path
 import logging
@@ -5,7 +6,6 @@ from time import asctime
 
 
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s: %(asctime)s]')
-
 project_name = "coccidiosis-chicken-detection-cnn "
 
 list_of_files = (
@@ -23,7 +23,8 @@ list_of_files = (
     "params.yaml",
     "requirements.txt",
     "setup.py",
-    "reasearch/trials.ipynb"
+    "reasearch/trials.ipynb",
+    "templates/index.html",
 
 
 
@@ -37,14 +38,13 @@ for filepath in list_of_files:
 
     if filedir !="":
         os.makedirs(filedir, exist_ok=True)
-        logging.info(f"Creating direcrtory; {filedir} for the file: {filename}")
+        logging.info(f"Creating direcrtory ; %s {filedir} for the file: {filename}")
 
-    if (not os.path.exists(filepath)) or (os.path.getsize == 0):
-        with open(filepath, "w") as f:
-            pass
-            logging.info(f"Creating empty fie¥le :{filepath}")
+
+    if (not os.path.exists(filepath)) or (os.path.getsize == 0) :
+        with open(filepath, "w", encoding="utf-8") as f:
+            logging.info(f"Creating empty fiele : %s {filepath}")
 
 
     else:
-        logging.info(f"{filename} is already exist")
-         
+        logging.info(f"{filename} is already exist %s")
