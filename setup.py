@@ -1,4 +1,5 @@
 "Module providing setup"
+import pandas as pd
 import setuptools
 
 with open("README.md", "r", encoding="utf-8") as f:
